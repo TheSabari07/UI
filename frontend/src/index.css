@@ -9,17 +9,32 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Premium dark: Oil Black base */
     background-color: #050505;
   }
 
   body {
     margin: 0;
     min-height: 100vh;
+    /* Premium dark: Oil Black base (not pure #000) */
     background-color: #050505;
+    /* Smooth scroll performance */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: auto;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 
   #root {
     min-height: 100vh;
+  }
+
+  /* Optimize scroll performance */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
@@ -48,5 +63,40 @@
 
   .scroll-reveal.visible {
     @apply opacity-100 translate-y-0;
+  }
+
+  /* Section Heading Typography System
+   * Engineered for premium brand authority
+   * - Desktop: single-line, wide, bold
+   * - Tablet: controlled 2-line max
+   * - Mobile: readable, stacked, never overflowing
+   */
+  .section-heading {
+    font-size: clamp(2.5rem, 8vw, 7rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: clamp(0.08em, 0.12em, 0.15em);
+    text-transform: uppercase;
+    color: rgb(243 244 246); /* gray-100 */
+  }
+
+  /* Hero heading - slightly larger, more spacing */
+  .hero-heading {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgb(243 244 246); /* gray-100 */
+  }
+
+  /* Subtle noise/grain overlay for premium texture */
+  .grain-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0.015;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
   }
 }

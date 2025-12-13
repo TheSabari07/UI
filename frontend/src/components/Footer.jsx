@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer className="w-full border-t border-neutral-800 bg-neutral-950 text-gray-300">
-      <div className="mx-auto max-w-6xl px-6 py-14 sm:px-8 lg:px-10">
+    <footer className="w-full text-gray-300">
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8 lg:px-10">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.26em] text-gray-400">
@@ -28,4 +28,3 @@ function Footer() {
 }
 
 export default Footer
-

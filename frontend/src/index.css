@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #050505;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #050505;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  /* Global hover utilities for interactive elements */
+  .hover-lux {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lux:hover {
+    @apply opacity-90;
+  }
+
+  .hover-lux-text {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lux-text:hover {
+    @apply text-gray-100;
+  }
+
+  /* Scroll reveal utility */
+  .scroll-reveal {
+    @apply opacity-0 translate-y-2 transition-all duration-700 ease-out;
+  }
+
+  .scroll-reveal.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
